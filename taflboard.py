@@ -87,9 +87,9 @@ class board:
                     sys.stdout.write('K')
             sys.stdout.write('\n')
         if self.turn == WHITE:
-            print "WHITE"
+            print("WHITE")
         else:
-            print "BLACK"
+            print("BLACK")
 
     # Returns the turn
     def getTurn(self):
@@ -210,19 +210,19 @@ class board:
         newSquare = self.getSquare(move[2],move[3])
         
         if oldSquare == EMPTY:
-            print "Nothing to move"
+            print("Nothing to move")
             return -1
 
         if newSquare != EMPTY:
-            print "Something's in the way"
+            print("Something's in the way")
             return -1
 
         if (move[0] != move[2]) and (move[1] != move[3]):
-            print "That's a diagonal"
+            print("That's a diagonal")
             return -1
 
         if (oldSquare != self.turn) and (not(self.turn == WHITE and oldSquare == KING)):
-            print "Its not that pieces turn"
+            print("Its not that pieces turn")
             return -1
 
         self.setSquare(EMPTY,move[0],move[1])
@@ -249,15 +249,15 @@ class board:
     # Prints out a string corresponding to which piece is passed in. Used for debugging.
     def printPiece(self,piece):
         if piece == EMPTY:
-            print "Empty"
+            print("Empty")
         elif piece == WHITE:
-            print "White"
+            print("White")
         elif piece == BLACK:
-            print "Black"
+            print("Black")
         elif piece == KING:
-            print "King"
+            print("King")
         else:
-            print "Not a piece"
+            print("Not a piece")
 
     # AI makes a random move out of the set of valid moves for the color that currently has the turn
     def aiTakeTurnRandom(self):
