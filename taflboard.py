@@ -385,6 +385,6 @@ class board:
     # WARNING! THIS FUNCTION DOES NOT CHECK FOR BLOCKING PIECES! IT CAN BE USED TO MAKE ILLEGAL MOVES
     def humanTakeTurn(self,move):
         if self.makeMove(move) == -1:
-            print "Invalid Move"
+            print("Invalid Move")
         else:
             self.toggleTurn()
