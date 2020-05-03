@@ -273,7 +273,7 @@ class board:
             for j in range(11):
                 if (self.squares[j][i] == KING):
                     return [j,i]
-        print "Something went terribly wrong"
+        print("Something went terribly wrong")
         return "shit"
         
     
