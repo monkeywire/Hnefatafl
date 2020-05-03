@@ -373,7 +373,7 @@ class board:
                 choice = random.randint(0,len(capture_moveset)-1)
                 self.makeMove(capture_moveset[choice])
                 self.toggleTurn()
-                return capture_moveset([choice])
+                return capture_moveset[choice]
             else:
                 choice = random.randint(0,len(better_moveset)-1)
                 self.makeMove(better_moveset[choice])
