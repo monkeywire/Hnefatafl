@@ -360,9 +360,9 @@ class board:
             for i in range(len(full_moveset)):
                 for j in range(len(kingSides)):
                     if full_moveset[i][2:4] == kingSides[j]:
-                        print("Found a good move")
-                        print(full_moveset[i][2:4])
-                        print(kingSides[j])
+                        #print("Found a good move")
+                        #print(full_moveset[i][2:4])
+                        #print(kingSides[j])
                         better_moveset.append(full_moveset[i])
             if better_moveset == []:
                 choice = random.randint(0,len(full_moveset)-1)
