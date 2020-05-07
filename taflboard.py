@@ -36,7 +36,8 @@ class board:
         self.size = size
         self.turn = WHITE
         self.win = EMPTY
-
+        self.move_history = []
+        
         # Set up the board
 
         if size == 11:
@@ -244,6 +245,7 @@ class board:
             if ( self.isSpecialSquare(x,y-2) or self.pieceToColor(self.getSquare(x,y-2)) == self.turn ) and self.getSquare(x,y-1) == self.getOppositeColor(self.turn):
                 self.setSquare(EMPTY,x,y-1)
 
+        self.move_history.append(move)
         return 0
 
     # Prints out a string corresponding to which piece is passed in. Used for debugging.
